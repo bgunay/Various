@@ -1,0 +1,1 @@
+java -Djava.security.policy=test.policy CalculatorClient %1 %2 %3
