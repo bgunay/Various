@@ -12,5 +12,7 @@ public class Demo
 	{
 		TestAnnotationParser parser = new TestAnnotationParser();
 		parser.parse(Annotated.class);
+		TestObject testObject = new TestObject("Przemek", "Nowak");
+		parser.invokeThis(testObject);
 	}
 }
