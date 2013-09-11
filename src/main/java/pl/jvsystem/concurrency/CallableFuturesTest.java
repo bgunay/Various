@@ -14,61 +14,64 @@ public class CallableFuturesTest
 {
 	private static final int NTHREDS = 10;
 
-//	public static void main(String...args)
-//	{
-//		ExecutorService executor = Executors.newFixedThreadPool(NTHREDS);
-//		List<Future<Long>> list = Lists.newArrayList();
-//		for (int i = 0; i < 20000; i++)
-//		{
-//			Callable<Long> worker = new MyCallable();
-//			Future<Long> submit = executor.submit(worker);
-//			list.add(submit);
-//		}
-//		long sum = 0;
-//		System.out.println(list.size());
-//		for (Future<Long> future : list)
-//		{
-//			try
-//			{
-//				sum += future.get();
-//			}
-//			catch (InterruptedException e)
-//			{
-//				e.printStackTrace();
-//			}
-//			catch (ExecutionException e)
-//			{
-//				e.printStackTrace();
-//			}
-//		}
-//		System.out.println(sum);
-//		executor.shutdown();
+	public static void main(String...args)
+	{
+		ExecutorService executor = Executors.newFixedThreadPool(NTHREDS);
+		List<Future<Long>> list = Lists.newArrayList();
+		for (int i = 0; i < 20000; i++)
+		{
+			Callable<Long> worker = new MyCallable();
+			Future<Long> submit = executor.submit(worker);
+			list.add(submit);
+		}
+		long sum = 0;
+		System.out.println(list.size());
+		for (Future<Long> future : list)
+		{
+			try
+			{
+				sum += future.get();
+			}
+			catch (InterruptedException e)
+			{
+				e.printStackTrace();
+			}
+			catch (ExecutionException e)
+			{
+				e.printStackTrace();
+			}
+		}
+		System.out.println(sum);
+		executor.shutdown();
+
+		String[] ar;
+
 //		Object[] greetings = {"Hello", "Hi"};
 //		String[] strings = (String[]) greetings;
 //		test("a", "b");
-//	}
-
-	public static void main(String[] args) throws Exception {
-		String[] greetings = { "Hello", "Hi" };
-
-		// no warning
-		Object[] objects = greetings;
-
-		// no warning
-		arrayTest(greetings);
-
-		// no warning
-		varargTest(objects);
-
-		// warning
-		varargTest(greetings);
-
-		varargTest(new String[15]);
-
-		System.out.println("null length array: " + elementCount((Object[])null));
-		System.out.println("[a,b,c] length array: " + elementCount("a", "b", "c"));
-
 	}
+
+//	public static void main(String[] args) throws Exception {
+//		String[] greetings = { "Hello", "Hi" };
+//
+//		// no warning
+//		Object[] objects = greetings;
+//
+//		// no warning
+//		arrayTest(greetings);
+//
+//		// no warning
+//		varargTest(objects);
+//
+//		// warning
+//		varargTest(greetings);
+//
+//		varargTest(new String[15]);
+//
+//		System.out.println("null length array: " + elementCount((Object[])null));
+//		System.out.println("[a,b,c] length array: " + elementCount("a", "b", "c"));
+//
+//	}
 
 	private static int elementCount(Object... elements) {
 		return elements == null ? 0 : elements.length;

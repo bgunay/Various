@@ -31,15 +31,15 @@ public class TestAnnotationParser
 		try
 		{
 			Method[] methods = Class.forName(theObject.getClass().getName()).getMethods();
-			for (int i = 0; i < methods.length; i++)
+			for (Method method : methods)
 			{
-				InvokeMultiple invokeMultiple = methods[i].getAnnotation(InvokeMultiple.class);
+				InvokeMultiple invokeMultiple = method.getAnnotation(InvokeMultiple.class);
 				if (invokeMultiple != null)
 				{
 					int numberOfTimesToInvoke = invokeMultiple.numberOfTimesToInvoke();
 					for (int j = 0; j < numberOfTimesToInvoke; j++)
 					{
-						methods[i].invoke(theObject, null);
+						method.invoke(theObject, null);
 					}
 				}
 			}
