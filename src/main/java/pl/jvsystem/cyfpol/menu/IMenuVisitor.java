@@ -1,4 +1,4 @@
-package pl.jvsystem.cp.menu;
+package pl.jvsystem.cyfpol.menu;
 
 /**
  * Interfejst definiujący zachowanie elementu, który może przeglądać strukturę menu.

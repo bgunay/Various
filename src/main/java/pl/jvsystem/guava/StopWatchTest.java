@@ -8,7 +8,7 @@ public class StopWatchTest
 	@SuppressWarnings("unused")
 	public static void main(String[] args)
 	{
-		Stopwatch s = new Stopwatch().start();
+		Stopwatch s = Stopwatch.createStarted();
 		for (int i = 0; i < 2500000; i++)
 		{
 			int a = 2;

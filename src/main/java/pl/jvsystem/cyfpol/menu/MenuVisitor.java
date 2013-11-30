@@ -1,4 +1,4 @@
-package pl.jvsystem.cp.menu;
+package pl.jvsystem.cyfpol.menu;
 
 import com.google.common.base.Strings;
 

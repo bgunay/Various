@@ -1,4 +1,4 @@
-package pl.jvsystem.cp.menu;
+package pl.jvsystem.cyfpol.menu;
 
 /**
  * Interfejs dla elementów posiadających nazwę. Rozszerza równeiż interfejs {@link IVisitable}

@@ -1,20 +1,23 @@
-package pl.jvsystem.cp;
+package pl.jvsystem.cyfpol;
 
-import pl.jvsystem.cp.menu.CompositeMenuComponent;
-import pl.jvsystem.cp.menu.MenuComponent;
+import pl.jvsystem.cyfpol.menu.CompositeMenuComponent;
+import pl.jvsystem.cyfpol.menu.MenuComponent;
+import pl.jvsystem.cyfpol.menu.MenuVisitor;
 
 /**
  * Przemek Nowak <przemek.nowak.pl@gmail.com>
- * Date: 24.03.13 21:13
+ * Date: 06.04.13 12:20
  */
-public class Task1
+public class Task2
 {
 	public static void main(String... args)
 	{
-		CompositeMenuComponent mainMenu = new CompositeMenuComponent();
 		CompositeMenuComponent menu = new CompositeMenuComponent("Menu główne");
 		menu.add(new MenuComponent("Wydruki"));
 		menu.add(new MenuComponent("Informacje"));
+		CompositeMenuComponent administration = new CompositeMenuComponent("Administracja");
+		administration.add(new MenuComponent("Zmień hasło"));
+		menu.add(administration);
 		CompositeMenuComponent activity = new CompositeMenuComponent("Aktywności");
 		activity.add(new MenuComponent("Lista oczekujących"));
 		activity.add(new MenuComponent("Moje"));
@@ -22,9 +25,8 @@ public class Task1
 		CompositeMenuComponent cases = new CompositeMenuComponent("Sprawy");
 		cases.add(new MenuComponent("Lista oczekujących"));
 		cases.add(new MenuComponent("Moje"));
-		mainMenu.add(menu);
-		CompositeMenuComponent administration = new CompositeMenuComponent("Administracja");
-		administration.add(new MenuComponent("Zmień hasło"));
-		mainMenu.add(administration);
+		menu.add(cases);
+
+		menu.accept(new MenuVisitor());
 	}
 }

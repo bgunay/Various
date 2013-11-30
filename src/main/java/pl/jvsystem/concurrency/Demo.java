@@ -10,7 +10,7 @@ import java.util.concurrent.*;
  * Przemek Nowak <przemek.nowak.pl@gmail.com>
  * Date: 06.05.13 22:39
  */
-public class CallableFuturesTest
+public class Demo
 {
 	private static final int NTHREDS = 10;
 

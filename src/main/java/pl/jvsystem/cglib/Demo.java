@@ -6,7 +6,8 @@ import net.sf.cglib.proxy.Enhancer;
  * Przemek Nowak <przemek.nowak.pl@gmail.com>
  * Date: 07.09.13 21:56
  */
-public class ProxyTest {
+public class Demo
+{
 	public static void main(String[] args)
 	{
 		// create the real object
