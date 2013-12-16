@@ -1,7 +1,6 @@
-package pl.jvsystem.redis;
+package pl.jvsystem.nosql.redis;
 
 import redis.clients.jedis.Jedis;
-import redis.clients.jedis.JedisMonitor;
 
 /**
  * Przemek Nowak <przemek.nowak.pl@gmail.com>

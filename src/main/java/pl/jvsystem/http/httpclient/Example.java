@@ -1,4 +1,4 @@
-package pl.jvsystem.httpclient;
+package pl.jvsystem.http.httpclient;
 
 import org.apache.commons.io.IOUtils;
 import org.apache.http.HttpResponse;

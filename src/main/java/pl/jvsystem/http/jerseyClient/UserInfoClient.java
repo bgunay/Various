@@ -1,4 +1,4 @@
-package pl.jvsystem.jerseyClient;
+package pl.jvsystem.http.jerseyClient;
 
 import com.sun.jersey.api.client.Client;
 import com.sun.jersey.api.client.ClientResponse;

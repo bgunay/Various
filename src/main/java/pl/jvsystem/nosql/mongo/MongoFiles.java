@@ -1,9 +1,8 @@
-package pl.jvsystem.mongo;
+package pl.jvsystem.nosql.mongo;
 
 import com.mongodb.*;
 
 import java.net.UnknownHostException;
-import java.util.Date;
 
 /**
  * Przemek Nowak <przemek.nowak.pl@gmail.com>
