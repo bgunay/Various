@@ -1,6 +1,7 @@
 package pl.jvsystem.ocjp.chapter8;
 
 import java.util.Comparator;
+import java.util.concurrent.TimeUnit;
 
 import com.google.common.base.Stopwatch;
 
@@ -9,9 +10,9 @@ public class Pockets
 
     public static void main(String[] args)
     {
-	Stopwatch s = new Stopwatch();
+	Stopwatch s = Stopwatch.createStarted();
 	
-	System.out.println(s.elapsedMillis());
+	System.out.println(s.elapsed(TimeUnit.MILLISECONDS));
 	
 	System.out.println(s.isRunning());
 	
