@@ -14,4 +14,12 @@ class HelloSpockSpec extends Specification {
 		"Kirk"   | 4
 		"Scotty" | 6
 	}
+
+	def "person test"() {
+		given: "a new person class is created"
+		def Person p = new Person(age: 15, name: 'Przemek')
+		expect: "persion has created"
+		p.name == 'Przemek'
+
+	}
 }
