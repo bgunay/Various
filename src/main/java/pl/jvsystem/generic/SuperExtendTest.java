@@ -1,5 +1,7 @@
 package pl.jvsystem.generic;
 
+import org.apache.commons.lang3.StringUtils;
+
 import java.util.List;
 
 public class SuperExtendTest
@@ -24,7 +26,8 @@ public class SuperExtendTest
 
 	public static void main(String[] args)
 	{
-
+		String fileName = "V" + StringUtils.replace("4.0.0", ".", "_") + ".xml";
+		System.out.println(fileName);
 	}
 
 }

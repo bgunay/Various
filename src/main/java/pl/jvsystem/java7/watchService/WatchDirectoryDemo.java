@@ -5,21 +5,16 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 
 /**
- * Przemek Nowak <przemek.nowak.pl@gmail.com>
- * Date: 07.12.13 22:22
+ * Przemek Nowak <przemek.nowak.pl@gmail.com> Date: 07.12.13 22:22
  */
-public class WatchDirectoryDemo
-{
-	public static void main(String[] args)
-	{
+public class WatchDirectoryDemo {
+
+	public static void main(String[] args) {
 		final Path path = Paths.get("D:\\Dropbox");
 		WatchDirectory watch = new WatchDirectory();
-		try
-		{
+		try {
 			watch.watchDir(path);
-		}
-		catch (IOException | InterruptedException ignored)
-		{
+		} catch (IOException | InterruptedException ignored) {
 
 		}
 	}

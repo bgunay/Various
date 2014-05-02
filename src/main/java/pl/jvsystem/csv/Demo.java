@@ -1,11 +1,11 @@
 package pl.jvsystem.csv;
 
+import java.io.FileReader;
+import java.util.Arrays;
+
 import org.supercsv.io.CsvBeanReader;
 import org.supercsv.io.ICsvBeanReader;
 import org.supercsv.prefs.CsvPreference;
-
-import java.io.FileReader;
-import java.util.Arrays;
 
 /**
  * Date: 11.12.13 10:53
