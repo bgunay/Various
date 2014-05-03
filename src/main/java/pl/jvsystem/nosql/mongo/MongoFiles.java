@@ -26,23 +26,23 @@ public class MongoFiles
 		/* INSERT EXAMPLE */
 		DBCollection table = db.getCollection("user");
 //		BasicDBObject document = new BasicDBObject();
-//		document.put("name", "przemek");
+//		document.put("firstName", "przemek");
 //		document.put("age", 30);
 //		document.put("createdDate", new Date());
 //		table.insert(document);
 
 		/* UPDATE EXAMPLE*/
 //		BasicDBObject query = new BasicDBObject();
-//		query.put("name", "przemek");
+//		query.put("firstName", "przemek");
 //		BasicDBObject newDocument = new BasicDBObject();
-//		newDocument.put("name", "przemek-updated");
+//		newDocument.put("firstName", "przemek-updated");
 //		BasicDBObject updateObj = new BasicDBObject();
 //		updateObj.put("$set", newDocument);
 //		table.update(query, updateObj);
 
 		/* SEARCH EXAMPLE */
 		BasicDBObject searchQuery = new BasicDBObject();
-		searchQuery.put("name", "przemek-updated");
+		searchQuery.put("firstName", "przemek-updated");
 		DBCursor cursor = table.find(searchQuery);
 		while (cursor.hasNext()) {
 			System.out.println(cursor.next());

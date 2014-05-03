@@ -13,7 +13,7 @@ import javax.ws.rs.core.MediaType;
 public class UserInfoClient
 {
 	public static final String BASE_URI = "http://localhost:8080/rest/";
-	public static final String PATH_NAME = "UserInfoService/name/";
+	public static final String PATH_NAME = "UserInfoService/firstName/";
 
 
 	public static void main(String[] args)

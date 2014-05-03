@@ -5,11 +5,12 @@ import groovy.transform.Canonical
 @Canonical
 class Person {
 
-	String name;
+	String firstName;
+	String lastName;
 	Integer age;
 
 	@Override
 	String toString() {
-		return "($name, $age)"
+		return "($firstName, $lastName, $age)"
 	}
 }

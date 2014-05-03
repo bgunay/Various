@@ -54,7 +54,7 @@ public class Employee implements Comparable<Employee>
 	@Override
 	public String toString()
 	{
-		return "id=" + id + "-name=" + name + "-years of service=" + yearsOfService;
+		return "id=" + id + "-firstName=" + name + "-years of service=" + yearsOfService;
 	}
 
 }

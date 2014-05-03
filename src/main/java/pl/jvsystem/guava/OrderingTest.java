@@ -47,8 +47,8 @@ public class OrderingTest
 	
 	/*
 	 * output: sorted copy based on years of service comparator:
-	 * [id=4-name=Sezin Karli-years of service=4, id=3-name=Darth
-	 * Vader-years of service=5, id=2-name=Han Solo-years of service=10]
+	 * [id=4-firstName=Sezin Karli-years of service=4, id=3-firstName=Darth
+	 * Vader-years of service=5, id=2-firstName=Han Solo-years of service=10]
 	 */
 
 	}

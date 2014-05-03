@@ -13,8 +13,8 @@ public class PersonTest {
 
 	@Test
 	public void personTest() {
-		Person p = new Person("Monika", 15);
-		assertThat(p.getName()).isEqualTo("Monika");
+		Person p = new Person("Monika", "Kowalska", 15);
+		assertThat(p.getFirstName()).isEqualTo("Monika");
 		assertThat(p.getAge()).isEqualTo(15);
 	}
 

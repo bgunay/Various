@@ -9,7 +9,7 @@ import org.junit.Test;
 /**
  * Date: 2014-05-02 21:26
  */
-public class StreamTest {
+public class StreamsTest {
 
 	@Test
 	public void streamingTest() {
