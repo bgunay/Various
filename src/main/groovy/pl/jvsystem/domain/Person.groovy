@@ -1,4 +1,4 @@
-package pl.jvsystem
+package pl.jvsystem.domain
 
 import groovy.transform.Canonical
 

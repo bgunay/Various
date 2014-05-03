@@ -1,5 +1,6 @@
-package pl.jvsystem
+package pl.jvsystem.spock
 
+import pl.jvsystem.domain.Person
 import spock.lang.Specification
 
 
@@ -18,8 +19,7 @@ class HelloSpockSpec extends Specification {
 	def "person test"() {
 		given: "a new person class is created"
 		def Person p = new Person(age: 15, name: 'Przemek')
-		expect: "persion has created"
+		expect: "person has name Przemek"
 		p.name == 'Przemek'
-
 	}
 }
