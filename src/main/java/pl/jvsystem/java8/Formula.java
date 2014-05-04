@@ -10,4 +10,8 @@ public interface Formula {
 		return Math.sqrt(a);
 	}
 
+	static double max(double a, double b) {
+		return a > b ? a : b;
+	}
+
 }
