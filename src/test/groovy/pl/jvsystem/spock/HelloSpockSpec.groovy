@@ -17,13 +17,6 @@ class HelloSpockSpec extends Specification {
 		"Scotty" | 6
 	}
 
-	def "person test"() {
-		given: "a new person class is created"
-		def Person p = new Person(age: 15, firstName: 'Przemek')
-		expect: "person has firstName Przemek"
-		p.firstName == 'Przemek'
-	}
-
 	@Unroll
 	def "maximum of #a and #b is #c"() {
 		expect:
@@ -33,6 +26,25 @@ class HelloSpockSpec extends Specification {
 		1 | 3 || 3
 		7 | 4 || 7
 		0 | 0 || 0
+	}
+
+	def "person test"() {
+		given: "a new person class is created"
+		def Person p = new Person(age: 15, firstName: 'Przemek')
+		expect: "person has firstName Przemek"
+		p.firstName == 'Przemek'
+	}
+
+
+	def "comarision of two integer"() {
+		given:
+		final int STATUS_ELEMENT_DUBEL= 5
+		Integer elementStatus = Integer.valueOf(5)
+		when:
+		boolean result = elementStatus == STATUS_ELEMENT_DUBEL
+		then:
+		result == true
+
 	}
 
 }
