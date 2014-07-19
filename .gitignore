@@ -1,3 +1,5 @@
 target/
 .idea/
 Various.iml
+.gradle/
+build/
