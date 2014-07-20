@@ -43,7 +43,7 @@ class HelloSpockSpec extends Specification {
 		when:
 		boolean result = elementStatus == STATUS_ELEMENT_DUBEL
 		then:
-		result == true
+		result
 
 	}
 
