@@ -1,8 +1,9 @@
 package pl.jvsystem.java8;
 
+import static org.assertj.core.api.Assertions.assertThat;
+
 import org.junit.Test;
 
-import static org.fest.assertions.Assertions.assertThat;
 
 /**
  * Date: 2014-05-03 14:44
