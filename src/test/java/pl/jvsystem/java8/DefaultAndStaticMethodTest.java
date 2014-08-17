@@ -7,6 +7,10 @@ import java.util.List;
 import java.util.Objects;
 
 import org.junit.Test;
+import pl.jvsystem.java8.interfaces.Implementation;
+import pl.jvsystem.java8.interfaces.MiddleInterface;
+import pl.jvsystem.java8.interfaces.SubInterface;
+import pl.jvsystem.java8.interfaces.SuperInterface;
 
 /**
  * Date: 2014-05-03 14:01
@@ -39,4 +43,24 @@ public class DefaultAndStaticMethodTest {
 		List<String> names = Arrays.asList("peter", "anna", "mike", "xenia");
 		assertThat(names.stream().anyMatch(Objects::isNull)).isFalse();
 	}
+
+	@Test
+	public void testAddedForEachAtIterables() {
+		List<String> list = Arrays.asList("A", "FirsT", "DefaulT", "LisT");
+		list.forEach(it -> System.out.println(it));
+		list.forEach(System.out::println);
+	}
+
+	@Test
+	public void testHierarhyOfDefaultMethods() {
+		SubInterface sub = new Implementation();
+		sub.printName();
+
+		MiddleInterface middle = new Implementation();
+		middle.printName();
+
+		SuperInterface sup = new Implementation();
+		sup.printName();
+	}
+
 }

@@ -9,6 +9,7 @@ import java.time.format.DateTimeFormatter;
 import java.time.format.FormatStyle;
 import java.time.temporal.ChronoField;
 import java.time.temporal.ChronoUnit;
+import java.time.temporal.TemporalAdjusters;
 import java.util.Date;
 import java.util.Locale;
 
@@ -86,6 +87,9 @@ public class NewDateApi {
 
 	@Test
 	public void testLocalDateTime() throws Exception {
+		LocalDateTime now = LocalDateTime.now();
+		System.out.println("now with last day of mont: "+now.with(TemporalAdjusters.lastDayOfMonth()));
+
 		LocalDateTime sylvester = LocalDateTime.of(2014, Month.DECEMBER, 31, 23, 59, 59);
 
 		DayOfWeek dayOfWeek = sylvester.getDayOfWeek();
@@ -113,4 +117,10 @@ public class NewDateApi {
 		System.out.println(string);     // Nov 03, 2014 - 07:13
 
 	}
+
+	@Test
+	public void testDuration() {
+		Duration duration = Duration.ofDays(566);
+	}
+
 }
