@@ -1,9 +1,10 @@
-package pl.jvsystem.concurrency.threadexecutor;
+package pl.jvsystem.concurrency.forkjoin;
 
 import org.htmlparser.Parser;
 import org.htmlparser.filters.NodeClassFilter;
 import org.htmlparser.tags.LinkTag;
 import org.htmlparser.util.NodeList;
+import pl.jvsystem.concurrency.threadexecutor.LinkHandler;
 
 import java.net.URL;
 import java.util.ArrayList;

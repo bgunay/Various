@@ -29,6 +29,7 @@ dependencies {
 	compile 'cglib:cglib:2.2.2'
 	compile 'org.codehaus.groovy.modules.http-builder:http-builder:0.7.1'
 	compile 'commons-io:commons-io:2.4'
+	compile 'com.netflix.rxjava:rxjava-core:0.19.6'
 	/* FOR PARALLEL TESTING */
 	compile 'org.codehaus.gpars:gpars:1.2.1'
 	testCompile 'edu.stanford.nlp:stanford-corenlp:1.3.5'

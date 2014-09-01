@@ -1,4 +1,6 @@
-package pl.jvsystem.concurrency.threadexecutor;
+package pl.jvsystem.concurrency.forkjoin;
+
+import pl.jvsystem.concurrency.threadexecutor.LinkHandler;
 
 import java.util.Collection;
 import java.util.Collections;
