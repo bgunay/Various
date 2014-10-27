@@ -8,6 +8,7 @@ import org.slf4j.LoggerFactory;
 
 import java.util.*;
 import java.util.concurrent.TimeUnit;
+import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 import static org.assertj.core.api.Assertions.assertThat;
@@ -19,6 +20,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 public class StreamsTest {
 	private static final Logger LOG = LoggerFactory.getLogger(StreamsTest.class);
 	private List<String> stringCollection = new ArrayList<>();
+	private List<Integer> integerCollection = new ArrayList<>();
 
 	@Before
 	public void setUp() throws Exception {
@@ -30,6 +32,19 @@ public class StreamsTest {
 		stringCollection.add("ccc");
 		stringCollection.add("bbb2");
 		stringCollection.add("ddd1");
+
+		integerCollection.add(1);
+		integerCollection.add(2);
+		integerCollection.add(3);
+		integerCollection.add(4);
+		integerCollection.add(5);
+	}
+
+
+	@Test
+	public void collectTest() {
+		System.out.println(integerCollection.stream().map(Object::toString).iterator());
+		//integerCollection.stream().map(Object::toString).collect(Collectors.toList()).forEach(i -> System.out.println(i.getClass()));
 	}
 
 	@Test
