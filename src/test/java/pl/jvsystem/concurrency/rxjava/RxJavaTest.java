@@ -35,4 +35,17 @@ public class RxJavaTest {
 		Observable<Integer> o = Observable.create((Subscriber<? super Integer> subscriber) -> subscriber.onNext(3));
 	}
 
+	@Test
+	public void testBaseExample() {
+		Observable.from("one", "two", "three")
+				.take(2)
+				.subscribe(System.out::println);
+	}
+
+	@Test
+	public void testRandomObservable() {
+		RandomObservable integers = new RandomObservable();
+		integers.take(5).subscribe(System.out::println);
+	}
+
 }
