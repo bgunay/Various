@@ -14,9 +14,6 @@ repositories {
 dependencies {
 	compile 'com.google.guava:guava:18.0'
 	compile 'org.codehaus.groovy:groovy-all:2.3.6'
-	testCompile 'org.spockframework:spock-core:0.7-groovy-2.0'
-	compile 'junit:junit:4.11'
-	compile 'org.assertj:assertj-core:1.6.1'
 	compile 'org.apache.commons:commons-lang3:3.3.2'
 	compile 'com.github.pnowy.nc:nativeCriteria-core:1.3'
 	compile 'org.apache.httpcomponents:httpclient:4.3.4'
@@ -35,14 +32,19 @@ dependencies {
 
 	/* FOR PARALLEL TESTING */
 	compile 'org.codehaus.gpars:gpars:1.2.1'
-	testCompile 'edu.stanford.nlp:stanford-corenlp:1.3.5'
 	compile 'org.codehaus.jsr166-mirror:jsr166y:1.7.0'
 	compile 'org.htmlparser:htmlparser:2.1'
 	compile('org.multiverse:multiverse-beta:0.7-RC-1') {
 		transitive = false
 	}
+	testCompile 'edu.stanford.nlp:stanford-corenlp:1.3.5'
+	testCompile 'org.spockframework:spock-core:0.7-groovy-2.0'
+	testCompile 'junit:junit:4.12'
+	testCompile 'org.assertj:assertj-core:1.6.1'
 	testCompile 'org.meanbean:meanbean:2.0.3'
 	testCompile 'nl.jqno.equalsverifier:equalsverifier:1.4.1'
+	testCompile 'com.h2database:h2:1.4.184'
+	testCompile 'org.polyjdbc:polyjdbc:0.4.0'
 }
 
 task info << {
@@ -55,4 +57,8 @@ task info << {
 
 task wrapper(type: Wrapper) {
 	gradleVersion = '2.2.1'
+}
+
+task helloWorld << {
+	println 'Hello world'
 }
