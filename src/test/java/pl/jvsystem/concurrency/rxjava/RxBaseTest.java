@@ -17,6 +17,8 @@ import java.util.List;
 public class RxBaseTest {
 	private static final Logger LOG = LoggerFactory.getLogger(RxBaseTest.class);
 
+    // added new line
+
 	@Test
 	public void helloWorldTest() {
 		Observable<String> myObservable = Observable.create(new Observable.OnSubscribe<String>() {
