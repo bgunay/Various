@@ -3,9 +3,7 @@ package pl.jvsystem.java8;
 import org.junit.Test;
 import pl.jvsystem.domain.Person;
 
-import java.util.Comparator;
-import java.util.Objects;
-import java.util.Optional;
+import java.util.*;
 import java.util.function.Consumer;
 import java.util.function.Function;
 import java.util.function.Predicate;
@@ -13,9 +11,7 @@ import java.util.function.Supplier;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-/**
- * Date: 2014-05-03 15:16
- */
+
 public class NewApiFromGuava {
 	@Test
 	public void testPredicates() throws Exception {
