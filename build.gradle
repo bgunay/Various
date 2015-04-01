@@ -26,7 +26,8 @@ dependencies {
 	compile 'com.sun.jersey:jersey-client:1.18.1'
 	compile 'cglib:cglib:2.2.2'
 	compile 'commons-io:commons-io:2.4'
-	compile 'com.netflix.rxjava:rxjava-core:0.19.6'
+	compile 'com.netflix.rxjava:rxjava-core:0.20.7'
+	compile 'com.netflix.hystrix:hystrix-core:1.4.3'
 	compile 'com.codahale.metrics:metrics-core:3.0.2'
 	compile 'com.esotericsoftware.yamlbeans:yamlbeans:1.08'
 	/* FOR PARALLEL TESTING */

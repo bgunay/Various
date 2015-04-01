@@ -17,7 +17,7 @@
 
     <logger name="pl.jvsystem.guava.eventbus" level="TRACE"/>
 
-    <root level="debug">
+    <root level="INFO">
         <appender-ref ref="STDOUT" />
         <!--<appender-ref ref="FILE" />-->
     </root>
