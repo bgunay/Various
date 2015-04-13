@@ -2,6 +2,7 @@ package pl.jvsystem.concurrency.gpars
 
 import com.google.common.base.Stopwatch
 import org.junit.Before
+import org.junit.Ignore
 import org.junit.Test
 
 import java.util.concurrent.TimeUnit
@@ -29,6 +30,7 @@ class FileDownloaderTest {
 	}
 
 	@Test
+	@Ignore
 	void testSerialDownload() {
 		Stopwatch s = Stopwatch.createStarted()
 		files.each { k, v ->
@@ -39,6 +41,7 @@ class FileDownloaderTest {
 	}
 
 	@Test
+	@Ignore
 	void testParallelDownload() {
 		Stopwatch s = Stopwatch.createStarted()
 		downloader.download(files, 5)
