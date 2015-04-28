@@ -2,7 +2,7 @@ package pl.jvsystem.actors
 
 import akka.actor._
 
-class TestActor extends Actor {
+class TestStopActor extends Actor {
   override def receive: Receive = {
     case _ => println("a message was received")
   }
@@ -10,7 +10,7 @@ class TestActor extends Actor {
 
 object SystemStopExample extends App {
   val system = ActorSystem("SystemStopExample")
-  val actor = system.actorOf(Props[TestActor], "test")
+  val actor = system.actorOf(Props[TestStopActor], "test")
   actor ! "hello"
   system.stop(actor)
   system.shutdown()

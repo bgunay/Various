@@ -20,7 +20,7 @@ class TestActor extends Actor {
 object AskTest extends App {
   val system = ActorSystem("AskTest")
 
-  val myActor = system.actorOf(Props[TestActor], "myActor")
+  val myActor = system.actorOf(Props[TestStopActor], "myActor")
 
   implicit  val timeout = Timeout(5 seconds)
   val future = myActor ? AskNameMessage
