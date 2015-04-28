@@ -3,6 +3,10 @@ package pl.jvsystem.java8;
 import static org.assertj.core.api.Assertions.assertThat;
 
 import org.junit.Test;
+import pl.jvsystem.java8.beans.Car;
+import pl.jvsystem.java8.beans.CarFactory;
+import pl.jvsystem.java8.beans.Converter;
+import pl.jvsystem.java8.beans.Something;
 
 
 /**

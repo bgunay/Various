@@ -7,6 +7,8 @@ import java.util.List;
 import java.util.Objects;
 
 import org.junit.Test;
+import pl.jvsystem.java8.beans.Formula;
+import pl.jvsystem.java8.beans.MagicFormula;
 import pl.jvsystem.java8.interfaces.Implementation;
 import pl.jvsystem.java8.interfaces.MiddleInterface;
 import pl.jvsystem.java8.interfaces.SubInterface;

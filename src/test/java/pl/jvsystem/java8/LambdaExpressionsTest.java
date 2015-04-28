@@ -1,6 +1,7 @@
 package pl.jvsystem.java8;
 
 import org.junit.Test;
+import pl.jvsystem.java8.beans.Converter;
 
 import java.util.Arrays;
 import java.util.Collections;

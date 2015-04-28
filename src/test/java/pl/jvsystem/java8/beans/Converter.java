@@ -1,4 +1,4 @@
-package pl.jvsystem.java8;
+package pl.jvsystem.java8.beans;
 
 /**
  * Date: 2014-05-03 14:21

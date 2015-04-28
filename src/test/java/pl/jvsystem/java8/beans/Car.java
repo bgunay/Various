@@ -1,11 +1,11 @@
-package pl.jvsystem.java8;
+package pl.jvsystem.java8.beans;
 
 /**
  * Date: 2014-05-03 14:46
  */
 public class Car {
-	String model;
-	String brand;
+	public String model;
+	public String brand;
 
 	public Car() {
 	}

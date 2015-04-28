@@ -2,6 +2,7 @@ package pl.jvsystem.java8;
 
 import org.junit.Test;
 import pl.jvsystem.domain.Person;
+import pl.jvsystem.java8.beans.Car;
 
 import java.util.*;
 import java.util.function.Consumer;
