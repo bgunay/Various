@@ -40,7 +40,7 @@ class Kenny extends Actor {
 
 object LifecycleDemo extends App {
   val system = ActorSystem("LifecycleDemo")
-  val kenny = system.actorOf(Props[Kenny], name = "kenny")
+  val kenny = system.actorOf(Props[Benny], name = "kenny")
 
   println("sending kenny a simple String message")
   kenny ! "hello"

@@ -19,7 +19,7 @@ class Child extends Actor {
   }
 }
 
-class Parent extends Actor {
+class Father extends Actor {
   override def receive: Actor.Receive = {
     case CreateChild(name) =>
       // parent creates new child here
@@ -32,7 +32,7 @@ class Parent extends Actor {
 
 object ParentChildDemo extends App {
   val system = ActorSystem("ParentChildTest")
-  val parent = system.actorOf(Props[Parent], "Parent")
+  val parent = system.actorOf(Props[Father], "Parent")
 
   // send messages to Parent to create to child actors
   parent ! CreateChild("Jonathan")
