@@ -9,6 +9,7 @@ import rx.functions.Action1;
 import rx.functions.Func1;
 
 import java.util.Arrays;
+import java.util.Iterator;
 import java.util.List;
 
 /**
@@ -53,6 +54,7 @@ public class RxBaseTest {
 	@Test
 	public void helloWorldSimplified() {
 		Observable<String> myObservable = Observable.just("Hello");
+
 		Action1<String> onNextAction = new Action1<String>() {
 			@Override
 			public void call(String s) {
@@ -84,6 +86,43 @@ public class RxBaseTest {
 
 	private Observable<List<String>> query() {
 		return Observable.from(Arrays.asList("one", "two", "three"), Arrays.asList("four", "five", "six"));
+	}
+
+
+	@Test
+	public void emptyTest() {
+		Observable.create(new Observable.OnSubscribe<Integer>() {
+			@Override
+			public void call(Subscriber<? super Integer> observer) {
+				try {
+					if (!observer.isUnsubscribed()) {
+						for (int i = 1; i < 5; i++) {
+							observer.onNext(i);
+						}
+						observer.onNext(34);
+						observer.onCompleted();
+					}
+				} catch (Exception e) {
+					observer.onError(e);
+				}
+			}
+		} ).subscribe(new Subscriber<Integer>() {
+			@Override
+			public void onNext(Integer item) {
+				System.out.println("Next: " + item);
+			}
+
+			@Override
+			public void onError(Throwable error) {
+				System.err.println("Error: " + error.getMessage());
+			}
+
+			@Override
+			public void onCompleted() {
+				System.out.println("Sequence complete.");
+			}
+		});
+
 	}
 
 

@@ -5,9 +5,9 @@ package pl.jvsystem.patterns.behavioral.state.mypattern;
  * Date: 02.06.13 13:13
  */
 public class StateA implements State {
+
 	@Override
-	public void writeName(StateContext stateContext, String name)
-	{
+	public void writeName(StateContext stateContext, String name) {
 		System.out.println(name.toLowerCase());
 		stateContext.setState(new StateB());
 	}

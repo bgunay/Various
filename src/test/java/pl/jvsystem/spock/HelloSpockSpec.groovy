@@ -36,7 +36,7 @@ class HelloSpockSpec extends Specification {
 	}
 
 
-	def "comarision of two integer"() {
+	def "comparison of two integer"() {
 		given:
 		final int STATUS_ELEMENT_DUBEL= 5
 		Integer elementStatus = Integer.valueOf(5)
@@ -44,7 +44,17 @@ class HelloSpockSpec extends Specification {
 		boolean result = elementStatus == STATUS_ELEMENT_DUBEL
 		then:
 		result
+	}
 
+	def "big integer test"() {
+		expect:
+		BigDecimal bd = new BigDecimal(new BigInteger(1224), 2); // expected amount 12.24
+		println bd											// 12.24
+		println bd.unscaledValue().toString() 				// 1224
+
+		def bd3 = bd.setScale(3, BigDecimal.ROUND_DOWN)		// someone use the scale 3 to convert to unscaled value which is sent to kerne
+		println bd3 										// 12.240
+		println bd3.unscaledValue().toString();				// 12240 in that way we get additional zero on amount
 	}
 
 }

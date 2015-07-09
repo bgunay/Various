@@ -4,8 +4,7 @@ package pl.jvsystem.patterns.behavioral.state.mypattern;
  * Przemek Nowak <przemek.nowak.pl@gmail.com>
  * Date: 02.06.13 13:12
  */
-public class StateContext
-{
+public class StateContext  {
 	private State myState;
 
 	/**
@@ -32,8 +31,7 @@ public class StateContext
 	 *
 	 * @param NAME
 	 */
-	public void writeName(final String NAME)
-	{
+	public void writeName(final String NAME) {
 		myState.writeName(this, NAME);
 	}
 }
