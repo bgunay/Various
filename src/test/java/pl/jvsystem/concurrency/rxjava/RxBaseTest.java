@@ -6,10 +6,8 @@ import org.slf4j.LoggerFactory;
 import rx.Observable;
 import rx.Subscriber;
 import rx.functions.Action1;
-import rx.functions.Func1;
 
 import java.util.Arrays;
-import java.util.Iterator;
 import java.util.List;
 
 /**
@@ -48,7 +46,6 @@ public class RxBaseTest {
 		};
 
 		myObservable.subscribe(mySubscriber);
-
 	}
 
 	@Test
@@ -85,7 +82,7 @@ public class RxBaseTest {
 	}
 
 	private Observable<List<String>> query() {
-		return Observable.from(Arrays.asList("one", "two", "three"), Arrays.asList("four", "five", "six"));
+		return Observable.just(Arrays.asList("one", "two", "three"), Arrays.asList("four", "five", "six"));
 	}
 
 

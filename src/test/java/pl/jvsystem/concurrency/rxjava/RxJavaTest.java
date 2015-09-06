@@ -6,18 +6,36 @@ import org.slf4j.LoggerFactory;
 
 import rx.Observable;
 import rx.Subscriber;
+import rx.functions.Action1;
 
 /**
  * RxJavaTest
  */
 public class RxJavaTest {
 	private static final Logger LOG = LoggerFactory.getLogger(RxJavaTest.class);
+
+
 	@Test
+	public void test1() throws Exception {
+		Observable<String> myObservable = Observable.just("Hello world!");
+		Action1<String> onNextAction = s -> System.out.println(s);
+		myObservable.subscribe(onNextAction);
+	}
+
+    @Test
+    public void test2() throws Exception {
+        Observable.just("Hello, world!")
+                .map(s -> s + " -Dan")
+                .subscribe(s -> System.out.println(s));
+
+    }
+
+    @Test
 	public void test() {
-		Observable<Integer> obs = Observable.from(1, 2, 3, 4, 5);
+		Observable<Integer> obs = Observable.just(1, 2, 3, 4, 5);
 		obs.map(i -> i * 10)
 				.filter(i -> i > 20)
-				.flatMap(i -> Observable.from(i, -i))
+				.flatMap(i -> Observable.just(i, -i))
 				.map(Object::toString)
 				.subscribe(LOG::info);
 
@@ -25,10 +43,10 @@ public class RxJavaTest {
 
 	@Test
 	public void testBlockingObservable() {
-		Observable<Integer> obs = Observable.from(1, 2, 3, 4, 5);
+		Observable<Integer> obs = Observable.just(1, 2, 3, 4, 5);
 		obs.map(i -> i * 10)
 				.filter(i -> i > 20)
-				.flatMap(i -> Observable.from(i, -i))
+				.flatMap(i -> Observable.just(i, -i))
 				.map(Object::toString)
 				.toBlocking().forEach(LOG::info);
 
@@ -37,7 +55,7 @@ public class RxJavaTest {
 
 	@Test
 	public void testBaseExample() {
-		Observable.from("one", "two", "three")
+		Observable.just("one", "two", "three")
 				.take(2)
 				.subscribe(System.out::println);
 	}
