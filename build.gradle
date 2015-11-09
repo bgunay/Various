@@ -61,7 +61,11 @@ dependencies {
 	testCompile 'org.springframework:spring-test:4.1.6.RELEASE'
 	testCompile 'com.hazelcast:hazelcast:3.4.2'
 
-    providedCompile "org.projectlombok:lombok:1.16.6"
+	/* AKKA */
+	compile 'com.typesafe.akka:akka-actor_2.11:2.3.13'
+	compile 'com.typesafe.akka:akka-persistence-experimental_2.11:2.3.13'
+
+	providedCompile "org.projectlombok:lombok:1.16.6"
 }
 
 task info << {
