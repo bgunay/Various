@@ -11,10 +11,6 @@ import org.springframework.test.context.support.AnnotationConfigContextLoader;
 import pl.jvsystem.spring.di.bean.SampleBean;
 import pl.jvsystem.spring.di.factory.SampleBeanFactory;
 
-/**
- * @author Przemek Nowak [przemek.nowak.pl@gmail.com]
- *         Date: 2015-04-28 19:47
- */
 //@ActiveProfiles("test")
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(loader = AnnotationConfigContextLoader.class)

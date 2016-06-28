@@ -1,7 +1,7 @@
 package pl.jvsystem.java8;
 
 import org.junit.Test;
-import pl.jvsystem.java8.beans.Converter;
+import pl.jvsystem.java8.domain.Converter;
 
 import java.util.Arrays;
 import java.util.Collections;
@@ -9,9 +9,6 @@ import java.util.List;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-/**
- * Date: 2014-05-03 14:08
- */
 public class LambdaExpressionsTest {
 
 	@Test

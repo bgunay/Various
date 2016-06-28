@@ -4,10 +4,7 @@ import rx.Observable;
 
 import java.util.Random;
 
-/**
- * RandomObservable
- */
-public class RandomObservable extends Observable<Integer> {
+class RandomObservable extends Observable<Integer> {
 
 	protected RandomObservable() {
 		super(subscriber -> {

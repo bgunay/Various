@@ -5,9 +5,6 @@ import com.hazelcast.core.Hazelcast;
 import com.hazelcast.core.HazelcastInstance;
 import org.junit.Test;
 
-/**
- * @author Przemek Nowak [przemek.nowak.pl@gmail.com]
- */
 public class HazelCastTest {
 
     @Test

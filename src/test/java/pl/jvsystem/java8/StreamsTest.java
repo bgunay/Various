@@ -13,10 +13,6 @@ import java.util.stream.Stream;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-
-/**
- * Date: 2014-05-02 21:26
- */
 public class StreamsTest {
 	private static final Logger LOG = LoggerFactory.getLogger(StreamsTest.class);
 	private List<String> stringCollection = new ArrayList<>();

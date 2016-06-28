@@ -3,9 +3,6 @@ package pl.jvsystem.concurrency.futures;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-/**
- * Client
- */
 public class Client {
 
 	private static final Logger LOG = LoggerFactory.getLogger(Client.class);

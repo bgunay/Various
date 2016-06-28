@@ -1,16 +1,11 @@
 package pl.jvsystem.yaml;
 
-import java.io.FileReader;
+import com.esotericsoftware.yamlbeans.YamlReader;
+import org.junit.Test;
+
 import java.io.InputStreamReader;
 import java.util.Map;
 
-import org.junit.Test;
-
-import com.esotericsoftware.yamlbeans.YamlReader;
-
-/**
- * YamlReading
- */
 public class YamlReadingTest {
 
 

@@ -10,9 +10,6 @@ import com.google.common.util.concurrent.FutureCallback;
 import com.google.common.util.concurrent.Futures;
 import com.google.common.util.concurrent.ListenableFuture;
 
-/**
- * ListenableFutureTest
- */
 public class ListenableFutureTest extends AbstractFuturesTest {
 	private static final Logger LOG = LoggerFactory.getLogger(ListenableFutureTest.class);
 
@@ -20,9 +17,9 @@ public class ListenableFutureTest extends AbstractFuturesTest {
 	@Test
 	public void should() {
 		ListenableFuture futureTask = executorService.submit(() -> {
-			Thread.sleep(2500l);
+			Thread.sleep(2500L);
 			LOG.info("siedzie sobie w watku i czekam...");
-			Thread.sleep(2500l);
+			Thread.sleep(2500L);
 			return "Ala ma kota";
 		});
 		Futures.addCallback(futureTask, new FutureCallback() {

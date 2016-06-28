@@ -9,9 +9,6 @@ import java.util.Map;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-/**
- * Date: 2014-05-03 17:36
- */
 public class NewMapApiTest {
 	private static final Logger LOG = LoggerFactory.getLogger(NewMapApiTest.class);
 

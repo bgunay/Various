@@ -1,7 +1,9 @@
 package pl.jvsystem.concurrency.deamon;
 
 /**
- * DeamonThreadTest
+ * A daemon thread in Java is one that doesn't prevent the JVM from exiting.
+ * Specifically the JVM will exit when only daemon threads remain.
+ * You create one by calling the setDaemon() method on Thread.
  */
 public class DeamonThreadTest {
 	public static void main(String[] args) {

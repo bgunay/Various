@@ -17,9 +17,6 @@ import java.util.stream.IntStream;
 
 import static java.util.stream.Collectors.toList;
 
-/**
- * RxBaseTest
- */
 public class RxBaseTest extends AbstractFuturesTest {
 	private static final Logger log = LoggerFactory.getLogger(RxBaseTest.class);
 

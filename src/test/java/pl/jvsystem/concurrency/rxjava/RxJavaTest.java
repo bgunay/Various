@@ -8,9 +8,6 @@ import rx.Observable;
 import rx.Subscriber;
 import rx.functions.Action1;
 
-/**
- * RxJavaTest
- */
 public class RxJavaTest {
 	private static final Logger LOG = LoggerFactory.getLogger(RxJavaTest.class);
 

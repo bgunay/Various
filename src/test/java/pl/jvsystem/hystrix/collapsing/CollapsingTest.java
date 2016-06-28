@@ -12,9 +12,6 @@ import rx.Observable;
 
 import com.netflix.hystrix.strategy.concurrency.HystrixRequestContext;
 
-/**
- * @author Przemek Nowak [przemek dot nowak dot pl at gmail.com]
- */
 public class CollapsingTest {
     private static final Logger log = LoggerFactory.getLogger(CollapsingTest.class);
 

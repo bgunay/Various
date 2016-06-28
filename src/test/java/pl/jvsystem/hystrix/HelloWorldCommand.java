@@ -5,14 +5,10 @@ import com.netflix.hystrix.HystrixCommandGroupKey;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-/**
- * @author Przemek Nowak [przemek.nowak.pl@gmail.com]
- *         Date: 2015-04-01 11:57
- */
-public class HelloWorldCommand extends HystrixCommand<String> {
+class HelloWorldCommand extends HystrixCommand<String> {
     private static final Logger LOG = LoggerFactory.getLogger(HelloWorldCommand.class);
 
-    protected HelloWorldCommand() {
+    HelloWorldCommand() {
         super(HystrixCommandGroupKey.Factory.asKey(HelloWorldCommand.class.getSimpleName()));
     }
 

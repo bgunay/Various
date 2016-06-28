@@ -3,10 +3,6 @@ package pl.jvsystem.concurrency.futures;
 import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.TimeUnit;
 
-/**
- * @author Przemek Nowak [przemek.nowak.pl@gmail.com]
- *         Date: 2015-04-13 11:18
- */
 public class InterruptibleTask implements Runnable {
 
     private final CountDownLatch started = new CountDownLatch(1);

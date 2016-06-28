@@ -13,9 +13,6 @@ import java.time.temporal.TemporalAdjusters;
 import java.util.Date;
 import java.util.Locale;
 
-/**
- * Date: 2014-05-03 17:55
- */
 public class NewDateApi {
 	private static final Logger LOG = LoggerFactory.getLogger(NewDateApi.class);
 

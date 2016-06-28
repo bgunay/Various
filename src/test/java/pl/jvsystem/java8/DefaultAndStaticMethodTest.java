@@ -7,16 +7,13 @@ import java.util.List;
 import java.util.Objects;
 
 import org.junit.Test;
-import pl.jvsystem.java8.beans.Formula;
-import pl.jvsystem.java8.beans.MagicFormula;
+import pl.jvsystem.java8.domain.Formula;
+import pl.jvsystem.java8.domain.MagicFormula;
 import pl.jvsystem.java8.interfaces.Implementation;
 import pl.jvsystem.java8.interfaces.MiddleInterface;
 import pl.jvsystem.java8.interfaces.SubInterface;
 import pl.jvsystem.java8.interfaces.SuperInterface;
 
-/**
- * Date: 2014-05-03 14:01
- */
 public class DefaultAndStaticMethodTest {
 
 	@Test
