@@ -23,7 +23,7 @@ object AkkaRxJava extends App {
     receiver ! Hello(msg)
   }
   subscription.unsubscribe
-  system.shutdown
+  system.terminate()
 
   def observableFromActor(actor: ActorRef): Observable[Message] =
     Observable { observer =>

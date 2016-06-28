@@ -32,6 +32,6 @@ object AkkaTest extends App {
   noNameActor ! "hello"
 
   // shout down the system
-  system.shutdown()
+  system.terminate()
 
 }

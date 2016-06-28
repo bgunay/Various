@@ -27,6 +27,6 @@ object DeadWatchTest extends App {
   val kenny = system.actorSelection("/user/Parent/Kenny")
   kenny ! PoisonPill
   Thread.sleep(5000)
-  system.shutdown()
+  system.terminate()
 
 }

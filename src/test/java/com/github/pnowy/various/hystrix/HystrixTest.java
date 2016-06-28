@@ -6,6 +6,7 @@ import com.netflix.hystrix.HystrixCommandKey;
 import com.netflix.hystrix.HystrixCommandMetrics;
 import com.netflix.hystrix.HystrixRequestLog;
 import com.netflix.hystrix.strategy.concurrency.HystrixRequestContext;
+import org.junit.Ignore;
 import org.junit.Test;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -38,7 +39,7 @@ public class HystrixTest {
         });
     }
 
-    @Test
+    @Test @Ignore
     public void testCircuitBreaker() throws Exception {
         //Initialize HystrixRequestContext to be able to get some metrics
         HystrixRequestContext context = HystrixRequestContext.initializeContext();

@@ -31,6 +31,6 @@ object AskTest extends App {
   val result2 = Await.result(future2, 1 second)
   println(result2)
 
-  system.shutdown()
+  system.terminate()
 
 }

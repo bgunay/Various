@@ -13,5 +13,5 @@ object SystemStopExample extends App {
   val actor = system.actorOf(Props[TestStopActor], "test")
   actor ! "hello"
   system.stop(actor)
-  system.shutdown()
+  system.terminate()
 }

@@ -53,6 +53,6 @@ object LifecycleDemo extends App {
   println("stopping kennny")
   system.stop(kenny)
 
-  system.shutdown()
+  system.terminate()
 
 }

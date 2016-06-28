@@ -45,6 +45,6 @@ object ParentChildDemo extends App {
   jonathan ! PoisonPill
 
   Thread.sleep(5000)
-  system.shutdown()
+  system.terminate()
 
 }
