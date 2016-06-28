@@ -1,4 +1,4 @@
-package pl.jvsystem.akka;
+package pl.jvsystem.concurrency.akka;
 
 import akka.japi.pf.ReceiveBuilder;
 import akka.persistence.AbstractPersistentActor;
@@ -6,11 +6,6 @@ import akka.persistence.SnapshotOffer;
 import scala.PartialFunction;
 import scala.runtime.BoxedUnit;
 
-import static java.util.Arrays.asList;
-
-/**
- * @author Przemek Nowak [przemek.nowak.pl@gmail.com]
- */
 public class ExamplePersistentActor extends AbstractPersistentActor {
 
     private ExampleState state = new ExampleState();

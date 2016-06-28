@@ -1,13 +1,11 @@
-package pl.jvsystem.akka;
+package pl.jvsystem.concurrency.akka;
 
 import akka.actor.ActorRef;
 import akka.actor.ActorSystem;
 import akka.actor.Props;
 
-/**
- * @author Przemek Nowak [przemek.nowak.pl@gmail.com]
- */
-public class PersistentActorExample {
+public class PersistentActorTest {
+
     public static void main(String[] args) throws Exception {
         final ActorSystem system = ActorSystem.create("example");
         final ActorRef persistentActor =

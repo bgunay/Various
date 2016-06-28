@@ -1,11 +1,8 @@
-package pl.jvsystem.akka;
+package pl.jvsystem.concurrency.akka;
 
 import java.io.Serializable;
 
-/**
- * @author Przemek Nowak [przemek.nowak.pl@gmail.com]
- */
-public class Evt implements Serializable {
+class Evt implements Serializable {
     private final String data;
 
     public Evt(String data) {

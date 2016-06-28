@@ -1,8 +1,4 @@
 package pl.jvsystem.dsl
-
-/**
- * ECommerceTestDataBuilder
- */
 class ECommerceTestDataBuilder {
 
 	ShoppingCart shoppingCart

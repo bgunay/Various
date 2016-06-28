@@ -1,11 +1,8 @@
-package pl.jvsystem.akka;
+package pl.jvsystem.concurrency.akka;
 
 import java.io.Serializable;
 import java.util.ArrayList;
 
-/**
- * @author Przemek Nowak [przemek.nowak.pl@gmail.com]
- */
 public class ExampleState implements Serializable {
     private final ArrayList<String> events;
 
