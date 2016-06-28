@@ -8,7 +8,7 @@
         </layout>
     </appender>
 
-    <logger name="pl.jvsystem.guava.eventbus" level="TRACE"/>
+    <logger name="com.github.pnowy.various.guava.eventbus" level="TRACE"/>
 
     <root level="DEBUG" >
         <appender-ref ref="STDOUT" />

@@ -1,0 +1,48 @@
+package com.github.pnowy.various.patterns.creational.builder.pattern1;
+
+/**
+ * Przemek Nowak <przemek.nowak.pl@gmail.com>
+ * Date: 05.05.13 19:35
+ */
+public class House implements HousePlan
+{
+	private String basement;
+	private String structure;
+	private String roof;
+	private String interior;
+
+	@Override
+	public void setBasement(String basement)
+	{
+		this.basement = basement;
+	}
+
+	@Override
+	public void setStructure(String structure)
+	{
+		this.structure = structure;
+	}
+
+	@Override
+	public void setRoof(String roof)
+	{
+		this.roof = roof;
+	}
+
+	@Override
+	public void setInterior(String interior)
+	{
+		this.interior = interior;
+	}
+
+	@Override
+	public String toString()
+	{
+		return "House{" +
+				"basement='" + basement + '\'' +
+				", structure='" + structure + '\'' +
+				", roof='" + roof + '\'' +
+				", interior='" + interior + '\'' +
+				'}';
+	}
+}

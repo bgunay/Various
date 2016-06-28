@@ -1,9 +1,8 @@
 package com.github.pnowy.various.spock
 
-import pl.jvsystem.domain.Person
+import com.github.pnowy.various.domain.Person
 import spock.lang.Specification
 import spock.lang.Unroll
-
 
 class HelloSpockSpec extends Specification {
 	def "length of Spock's and his friends' names"() {
